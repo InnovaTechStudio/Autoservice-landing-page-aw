@@ -95,6 +95,15 @@ const translations = {
         plan3_f6: "Custom Branding",
         plan3_cta: "Contact Sales",
 
+        // About the Product
+        about_label: "ABOUT THE PRODUCT",
+        about_title: "See AutoService in action",
+        about_subtitle: "Watch how AutoService simplifies daily workshop operations from intake to billing.",
+        about_duration: "Watch the demo · 2:30 min",
+        about_pill1: "Secure & reliable",
+        about_pill2: "Fast setup",
+        about_pill3: "Intuitive dashboard",
+
         // CTA
         cta_label: "Start today",
         cta_title: "Ready to take control of your workshop?",
@@ -222,6 +231,15 @@ const translations = {
         plan3_f5: "Soporte multi-ubicación",
         plan3_f6: "Marca personalizada",
         plan3_cta: "Contactar Ventas",
+
+        // About the Product
+        about_label: "SOBRE EL PRODUCTO",
+        about_title: "Ve AutoService en acción",
+        about_subtitle: "Descubre cómo AutoService simplifica las operaciones diarias de tu taller, desde la recepción hasta la facturación.",
+        about_duration: "Ver demo · 2:30 min",
+        about_pill1: "Seguro y confiable",
+        about_pill2: "Configuración rápida",
+        about_pill3: "Panel intuitivo",
 
         // CTA
         cta_label: "Empieza hoy",
