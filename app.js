@@ -403,3 +403,63 @@ window.addEventListener("scroll", () => {
         el.style.transform = `translate3d(0, ${offset}px, 0)`;
     });
 });
+/* =========================
+   ABOUT THE TEAM VIDEO
+========================= */
+
+(function () {
+
+    const video = document.querySelector('.about-team__video');
+    const overlay = document.getElementById('teamOverlay');
+    const playBtn = document.getElementById('teamPlayBtn');
+    const ctrlPlay = document.getElementById('teamCtrlPlay');
+    const ctrlMute = document.getElementById('teamCtrlMute');
+    const ctrlFs = document.getElementById('teamCtrlFs');
+    const fill = document.getElementById('teamFill');
+    const time = document.getElementById('teamTime');
+
+    if (!video) return;
+
+    function format(seconds) {
+        const m = Math.floor(seconds / 60);
+        const s = Math.floor(seconds % 60);
+        return `${m}:${String(s).padStart(2, '0')}`;
+    }
+
+    function togglePlay() {
+        if (video.paused) {
+            video.play();
+            overlay.style.opacity = "0";
+            overlay.style.pointerEvents = "none";
+        } else {
+            video.pause();
+            overlay.style.opacity = "1";
+            overlay.style.pointerEvents = "auto";
+        }
+    }
+
+    playBtn.addEventListener("click", togglePlay);
+    ctrlPlay.addEventListener("click", togglePlay);
+
+    ctrlMute.addEventListener("click", () => {
+        video.muted = !video.muted;
+    });
+
+    ctrlFs.addEventListener("click", () => {
+        if (video.requestFullscreen)
+            video.requestFullscreen();
+    });
+
+    video.addEventListener("timeupdate", () => {
+        if (!video.duration) return;
+
+        fill.style.width = (video.currentTime / video.duration * 100) + "%";
+        time.textContent = format(video.currentTime);
+    });
+
+    video.addEventListener("ended", () => {
+        overlay.style.opacity = "1";
+        overlay.style.pointerEvents = "auto";
+    });
+
+})();
