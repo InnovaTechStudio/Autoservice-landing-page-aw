@@ -310,6 +310,95 @@
             </div>
         </section>
 
+        <!-- ABOUT THE TEAM -->
+<section id="about-team" class="about-product about-team">
+    <div class="container">
+
+        <div class="about-product__header">
+            <span class="section-label section-label--primary">
+                ABOUT THE TEAM
+            </span>
+
+            <h2 class="about-product__title">
+                Meet the team behind AutoService
+            </h2>
+
+            <p class="about-product__subtitle">
+                Learn about the people who designed and developed AutoService to
+                simplify workshop management.
+            </p>
+        </div>
+
+        <div class="about-product__player-wrap">
+            <div class="about-product__player">
+
+                <video class="about-team__video" controls preload="metadata">
+                    <source src="videos/team-video.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+
+                <div class="about-product__overlay" id="teamOverlay">
+                    <button class="about-product__play-btn" id="teamPlayBtn">
+                        <i data-lucide="play"></i>
+                    </button>
+
+                    <span class="about-product__duration">
+                        Meet our team · 3:00 min
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="about-product__bar">
+
+                <div class="about-product__progress">
+                    <div class="about-product__fill" id="teamFill"></div>
+                </div>
+
+                <div class="about-product__controls">
+
+                    <button class="about-product__ctrl" id="teamCtrlPlay">
+                        <i data-lucide="play"></i>
+                    </button>
+
+                    <span class="about-product__time" id="teamTime">0:00</span>
+
+                    <button class="about-product__ctrl" id="teamCtrlMute">
+                        <i data-lucide="volume-2"></i>
+                    </button>
+
+                    <button class="about-product__ctrl about-product__ctrl--right" id="teamCtrlFs">
+                        <i data-lucide="maximize-2"></i>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="about-product__pills">
+
+            <span class="about-product__pill">
+                <i data-lucide="users"></i>
+                <span>Collaborative Team</span>
+            </span>
+
+            <span class="about-product__pill">
+                <i data-lucide="code-2"></i>
+                <span>Software Engineers</span>
+            </span>
+
+            <span class="about-product__pill">
+                <i data-lucide="lightbulb"></i>
+                <span>Innovation Driven</span>
+            </span>
+
+        </div>
+
+    </div>
+</section>
+
+        
+
         <script>
             (function () {
                 const video = document.querySelector('.about-product__video');
